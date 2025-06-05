@@ -6,6 +6,17 @@ const rows = 4;
 
 window.onload = function() {
     generateBoard();
+    document.getElementById("new-game").addEventListener("click", newGame); //new game button
+}
+
+function newGame() {
+    score = 0;
+    lostGame = false;
+
+    const gameBoard = document.getElementById("game-board"); //clear board in DOM
+    gameBoard.innerHTML = ""; //remove existing tiles
+    generateBoard(); //recreate the board
+    document.getElementById("score").innerText = score; //reset score in HTML
 }
 
 function generateBoard() {
@@ -65,7 +76,7 @@ function valueProbability() {
 }
 
 function populateTiles() {
-    if (!hasEmptyTile) {
+    if (!hasEmptyTile()) {
         return; //break out of function if board is full
     }
 
@@ -81,76 +92,69 @@ function populateTiles() {
         if (board[r][c] == 0) {
             board[r][c] = value; //set board at that r,c to a number from the method
             let tile = document.getElementById(r.toString() + "-" + c.toString()); //update HTML
-            tile.innerText = value.toString(); //add text of 2
-            tile.classList.add("x2"); //add 2 class
+            const album = valueClassifier(value); 
+            tile.style.backgroundImage = `url("images/${album}.svg")`;
             open = true; //exit while loop
         }
     }
 }
 
 //interprets values from the board into album names for use when assigning classes
-// function valueClassifier(value) {
-//     let classifier;
+function valueClassifier(value) {
+    switch(value) {
+        case 2:
+            return "girl-in-new-york";
 
-//     switch(value) {
-//         case 2:
-//             classifier = "girl-in-new-york";
-//             break;
+        case 4:
+            return "minimal";
 
-//         case 4:
-//             classifier = "minimal";
-//             break;
+        case 8:
+            return "oh-how-perfect";
 
-//         case 8:
-//             classifier = "oh-how-perfect";
-//             break;
+        case 16:
+            return "notice-me-acoustic";
 
-//         case 16:
-//             classifier = "notice-me-acoustic";
-//             break;
+        case 32:
+            return "our-little-angel";
 
-//         case 32:
-//             classifier = "our-little-angel";
-//             break;
+        case 64:
+            return "death-wish";
 
-//         case 64:
-//             classifier = "death-wish";
-//             break;
+        case 128:
+            return "rx";
 
-//         case 128:
-//             classifier = "rx";
-//             break;
+        case 256:
+            return "cross-your-mind";
 
-//         case 256:
-//             classifier = "cross-your-mind";
-//             break;
+        case 512:
+            return "a-little-more-time";
 
-//         case 512:
-//             classifier = "a-little-more-time";
-//             break;
+        case 1024:
+            return "kansas-anymore";
 
-//         case 1024:
-//             classifier = "kansas-anymore";
-//             break;
-
-//         case 2048:
-//             classifier = "kansas-anymore-deluxe";
-//             break;
-//     }
-
-//     return classifier;
-// }
+        case 2048:
+            return "kansas-anymore-deluxe";
+        
+        default:
+            return null;
+    }
+}
 
 function updateTile(tile, value) {
-    tile.innerText = ""; //reset tile div content
     tile.classList.value = ""; //reset classes
     tile.classList.add("tile");
+
+    tile.style.backgroundImage = ""; //clear old background
+    tile.style.backgroundSize = "cover" //fit background
+
     if (value > 0) {
-        tile.innerText = value;
-        if (value <= 1024) {
-            tile.classList.add("x" + value.toString())
-        } else {
-            tile.classList.add("x2048")
+        const album = valueClassifier(value);
+        if (album) {
+            if (value >= 2048) {
+                tile.style.backgroundImage = `url("images/kansas-anymore-deluxe.svg")`;
+            } else {
+                tile.style.backgroundImage = `url("images/${album}.svg")`;
+            }
         }
     }
 }

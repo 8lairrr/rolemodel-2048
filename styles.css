@@ -69,6 +69,12 @@ button {
     border-radius: 25px;
 }
 
+button:hover {
+    color: #F5F5F5;
+    background-color: #B3B3B3;
+    box-shadow: 1px 3px 5px 0 #b3b3b3cf;
+}
+
 h2 {
     color: #F5F5F5;
     margin: 15px auto;
@@ -101,48 +107,4 @@ hr {
 #logo {
     margin: 75px auto 20px auto;
     height: 50px;
-}
-
-.x2 {
-    background-color:red;
-}
-
-.x4 {
-    background-color: orangered;
-}
-
-.x8 {
-    background-color:orange;
-}
-
-.x16 {
-    background-color:yellow;
-}
-
-.x32 {
-    background-color:yellowgreen;
-}
-
-.x64 {
-    background-color:greenyellow;
-}
-
-.x128 {
-    background-color:green;
-}
-
-.x256 {
-    background-color:lightblue;
-}
-
-.x512 {
-    background-color: blue;
-}
-
-.x1024 {
-    background-color:blueviolet;
-}
-
-.x2048 {
-    background-color:purple;
 }
