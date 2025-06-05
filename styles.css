@@ -1,0 +1,40 @@
+html {
+    background-color: #F0EAD2;
+    scrollbar-width: none;
+}
+
+body {
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    text-align: center;
+}
+
+h1 {
+    margin: 30px;
+    margin-left: 42%;
+    width: fit-content;
+    font-size: 50px;
+    color: pink;
+}
+
+h3 {
+    font-size: 25px;
+    color: pink;
+}
+
+#game-board {
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    border: 5px solid green;
+    border-radius: 5%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    width: 115px;
+    height: 115px;
+    border: 5px solid green;
+    border-radius: 10%;
+}
