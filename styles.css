@@ -36,20 +36,25 @@ h3 {
 }
 
 #game-board {
-    height: 500px;
-    width: 500px;
+    height: 400px;
+    width: 400px;
     background-color: #1DB954;
-    border-radius: 25px;
+    border: #15803a;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
 }
 
 .tile {
-    width: 115px;
-    height: 115px;
-    border: 5px solid #535353;
-    border-radius: 25px;
+    width: 90px;
+    height: 90px;
+    border: 5px solid #15803a;
+
+    /* remove later */
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
@@ -96,4 +101,48 @@ hr {
 #logo {
     margin: 75px auto 20px auto;
     height: 50px;
+}
+
+.x2 {
+    background-color:red;
+}
+
+.x4 {
+    background-color: orangered;
+}
+
+.x8 {
+    background-color:orange;
+}
+
+.x16 {
+    background-color:yellow;
+}
+
+.x32 {
+    background-color:yellowgreen;
+}
+
+.x64 {
+    background-color:greenyellow;
+}
+
+.x128 {
+    background-color:green;
+}
+
+.x256 {
+    background-color:lightblue;
+}
+
+.x512 {
+    background-color: blue;
+}
+
+.x1024 {
+    background-color:blueviolet;
+}
+
+.x2048 {
+    background-color:purple;
 }
