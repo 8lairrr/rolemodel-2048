@@ -5,14 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
     <script src="logic.js"></script>
-    <title>2048 Coffee</title>
+    <title>ROLE MODEL 2048</title>
 </head>
 <body>
     
-    <h1>2048 Coffee</h1>
-    <h3>Score: <span id="score">0</span></h3>
+    <img src="images/role-model.svg" class="role-model">
+    <h1>ROLE MODEL 2048</h1>
+    <h3>SCORE: <span id="score">0</span></h3>
     <!-- score = tile value + tile value + existing score -->
 
     <div id="game-board"></div>
+    <button>NEW GAME</button>
+
+    <h2>HOW TO PLAY:</h2>
+    <p>ROLE MODEL 2048 is a musically-themed version of the classic puzzle game 2048. In 
+        this version, combine tiles featuring his albums, singles, and EPs to progress
+        through his discography to his latest release: Kansas Anymore (The Longest Goodbye).</p>
+    <p>Just like the original 2048, combine matching tiles by pressing the arrow keys on your 
+        keyboard to slide them in that direction. When two identical tiles collide, they merge into
+        a new one representing the next level. Keep going until you unlock all 11 covers!</p>
+
+    <!-- implementing guide later: i want it to be like a music player where skipping shows the next level, etc. -->
+    <!-- <h2>TILE GUIDE:</h2>
+    <div id="tile-guide">
+        <div id="level-image"></div>
+        <h4>LEVEL <span id="level-num">1</span></h4>
+        <hr id="guide-progress">
+        <div id="buttons">
+            <div id="skip-back"></div>
+            <h2 class="play-button"><span id="level-num" class="play-button">1</span></h2>
+            <div id="skip-next"></div>
+        </div>
+    </div> -->
+
+    <img src="images/logo.svg" id="logo">
 </body>
 </html>

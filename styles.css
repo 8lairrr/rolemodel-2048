@@ -1,32 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 html {
-    background-color: #F0EAD2;
     scrollbar-width: none;
 }
 
 body {
-    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-family: "Poppins", sans-serif;
     text-align: center;
+    background: linear-gradient(#B3B3B3, #212121);
+    padding: 20px;
 }
 
 h1 {
-    margin: 30px;
-    margin-left: 42%;
+    margin: 0 auto;
     width: fit-content;
     font-size: 50px;
-    color: pink;
+    color: #212121;
 }
 
 h3 {
+    margin: 0 auto 10px auto;
     font-size: 25px;
-    color: pink;
+    color: #212121;
+}
+
+.role-model {
+    height: 150px;
+    margin-bottom: 0;
 }
 
 #game-board {
     height: 500px;
     width: 500px;
-    background-color: white;
-    border: 5px solid green;
-    border-radius: 5%;
+    background-color: #1DB954;
+    border-radius: 25px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -35,6 +48,52 @@ h3 {
 .tile {
     width: 115px;
     height: 115px;
-    border: 5px solid green;
-    border-radius: 10%;
+    border: 5px solid #535353;
+    border-radius: 25px;
+}
+
+button {
+    background-color: #D9D9D9;
+    font-weight: 900;
+    color: #212121;
+    font-size: 20px;
+    border: none;
+    margin: 15px auto;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+h2 {
+    color: #F5F5F5;
+    margin: 15px auto;
+}
+
+p {
+    margin: 15px auto;
+    color: #F5F5F5;
+    width: 60%;
+}
+
+/* h4 {
+    color: #F5F5F5;
+    margin: 5px auto;
+}
+
+hr {
+    width: 25%;
+}
+
+.play-button {
+    color: #212121;
+    width: 50px;
+    height: 50px;
+    background-color: #F5F5F5;
+    border-radius: 100%;
+    align-items: center;
+} */
+
+#logo {
+    margin: 75px auto 20px auto;
+    height: 50px;
 }
