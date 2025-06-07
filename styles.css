@@ -57,7 +57,7 @@ h3 {
     align-items: center;
 }
 
-button {
+#new-game {
     background-color: #D9D9D9;
     font-weight: 900;
     color: #212121;
@@ -69,7 +69,7 @@ button {
     border-radius: 25px;
 }
 
-button:hover {
+#new-game:hover {
     color: #F5F5F5;
     background-color: #B3B3B3;
     box-shadow: 1px 3px 5px 0 #b3b3b3cf;
@@ -86,14 +86,39 @@ p {
     width: 60%;
 }
 
-/* h4 {
+h4 {
     color: #F5F5F5;
-    margin: 5px auto;
+    margin: 10px auto;
 }
 
-hr {
-    width: 25%;
+#tile-guide-title {
+    margin: 20px auto;
 }
+
+#level-image {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+#guide-progress {
+    width: 25%;
+    height: 5px;
+    background-color: #F5F5F5; /* light grey base */
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px auto;
+  }
+  
+  #progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #212121; /* dark grey fill */
+    transition: width 0.3s ease;
+  }
 
 .play-button {
     color: #212121;
@@ -101,8 +126,21 @@ hr {
     height: 50px;
     background-color: #F5F5F5;
     border-radius: 100%;
-    align-items: center;
-} */
+    align-content: center;
+}
+
+.skip-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+
+#buttons {
+    display: inline-flex;
+    gap: 30px
+}
 
 #logo {
     margin: 75px auto 20px auto;

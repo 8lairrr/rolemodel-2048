@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
-    <script src="logic.js"></script>
     <title>ROLE MODEL 2048</title>
 </head>
 <body>
@@ -24,19 +23,25 @@
         keyboard to slide them in that direction. When two identical tiles collide, they merge into
         a new one representing the next level. Keep going until you unlock all 11 covers!</p>
 
-    <!-- implementing guide later: i want it to be like a music player where skipping shows the next level, etc. -->
-    <!-- <h2>TILE GUIDE:</h2>
+    <h2 id="tile-guide-title">TILE GUIDE:</h2>
     <div id="tile-guide">
         <div id="level-image"></div>
         <h4>LEVEL <span id="level-num">1</span></h4>
-        <hr id="guide-progress">
+        <div id="guide-progress">
+            <div id="progress-fill"></div>
+          </div>
         <div id="buttons">
-            <div id="skip-back"></div>
-            <h2 class="play-button"><span id="level-num" class="play-button">1</span></h2>
-            <div id="skip-next"></div>
+            <button id="skip-back" class="skip-btn">
+                <img src="images/skip-button.svg" style="transform: rotate(180deg);" alt="Skip Back">
+              </button>
+              <h2 class="play-button"><span id="button-level" class="play-button">1</span></h2>
+              <button id="skip-next" class="skip-btn">
+                <img src="images/skip-button.svg" alt="Skip Next">
+              </button>
         </div>
-    </div> -->
+    </div>
 
     <img src="images/logo.svg" id="logo">
+    <script src="logic.js"></script>
 </body>
 </html>

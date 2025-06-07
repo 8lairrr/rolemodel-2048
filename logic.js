@@ -3,9 +3,23 @@ let score = 0;
 let lostGame = false;
 const columns = 4;
 const rows = 4;
+const albums = [
+    {level: "1", path: "images/girl-in-new-york.svg"},
+    {level: "2", path: "images/minimal.svg"},
+    {level: "3", path: "images/oh-how-perfect.svg"},
+    {level: "4", path: "images/notice-me-acoustic.svg"},
+    {level: "5", path: "images/our-little-angel.svg"},
+    {level: "6", path: "images/death-wish.svg"},
+    {level: "7", path: "images/rx.svg"},
+    {level: "8", path: "images/cross-your-mind.svg"},
+    {level: "9", path: "images/a-little-more-time.svg"},
+    {level: "10", path: "images/kansas-anymore.svg"},
+    {level: "11", path: "images/kansas-anymore-deluxe.svg"}
+]
 
 window.onload = function() {
     generateBoard();
+    updateLevel(); //for tile guide
     document.getElementById("new-game").addEventListener("click", newGame); //new game button
 }
 
@@ -275,3 +289,29 @@ document.addEventListener("keydown", (e) => {
         document.getElementById("score").innerText = score; // update score
     }
 });
+
+let currentIndex = 0;
+
+document.getElementById('skip-back').addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateLevel();
+    }
+});
+
+document.getElementById('skip-next').addEventListener('click', () => {
+    if (currentIndex < albums.length - 1) {
+        currentIndex++;
+        updateLevel();
+    }
+});
+
+function updateLevel() {
+    const currentLevel = albums[currentIndex].level;
+    const currentImagePath = albums[currentIndex].path;
+    document.getElementById("level-num").innerText = currentLevel;
+    document.getElementById("button-level").innerText = currentLevel;
+    document.getElementById("level-image").style.backgroundImage = `url(${currentImagePath})`;
+    const percent = (currentIndex / (albums.length - 1)) * 100;
+    document.getElementById("progress-fill").style.width = `${percent}%`;
+}
