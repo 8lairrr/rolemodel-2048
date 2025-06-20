@@ -50,6 +50,7 @@ To run locally:
 git clone https://github.com/8lairrr/rolemodel-2048.git
 cd rolemodel-2048
 open index.html
+```
 
 ---
 
