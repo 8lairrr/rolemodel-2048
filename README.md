@@ -57,5 +57,5 @@ open index.html
 ## 🤝 Credits
 
 - **Project by**: Delia Holman  
-- **Inspired by**: [ROLE MODEL (artist)](https://open.spotify.com/artist/5FxD6fxyjawhKKU2GQYgRt)  
+- **Inspired by**: [ROLE MODEL (artist)](https://open.spotify.com/artist/1dy5WNgIKQU6ezkpZs4y8z?si=YyzgRNq1SPihm-_6_s70vg)  
 - **Game Logic Inspiration**: [Original 2048 Game by Gabriele Cirulli](https://github.com/gabrielecirulli/2048)
