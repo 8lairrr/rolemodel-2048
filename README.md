@@ -2,7 +2,7 @@
 
 A musically-themed version of the classic 2048 puzzle game — inspired by the discography of ROLE MODEL. Instead of merging numbers, players combine tiles featuring album art, EPs, and singles to progress through his musical journey, culminating in his latest release: *Kansas Anymore (The Longest Goodbye)*.
 
-🌐 **Live Demo**: [8lairrr-rolemodel-2048.io](http://8lairrr-rolemodel-2048.io/)
+🌐 **Live Demo**: [8lairrr.github.io/rolemodel-2048/](https://8lairrr.github.io/rolemodel-2048/)
 
 ---
 
@@ -43,7 +43,7 @@ A musically-themed version of the classic 2048 puzzle game — inspired by the d
 ## 🚀 Deployment
 
 This site is deployed at:  
-🔗 [http://8lairrr-rolemodel-2048.io](http://8lairrr-rolemodel-2048.io)
+🔗 [https://8lairrr.github.io/rolemodel-2048/](https://8lairrr.github.io/rolemodel-2048/)
 
 To run locally:
 ```bash
